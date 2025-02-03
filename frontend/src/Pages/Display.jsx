@@ -1,0 +1,47 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+
+
+
+const Display=()=>{
+
+    const [val,setval]=useState([])
+
+    const loaddata=()=>{
+        let api="http://localhost:8005/employee/empDisplay"
+        axios.get(api).then((res)=>{
+              setval(res.data)
+        })
+    }
+
+    useEffect(()=>{
+        loaddata()
+    })
+
+
+
+    const ans = val.map((key)=>{
+        return(
+            <>
+            <tr>
+                <td>{key.empno}</td>
+                <td>{key.empname}</td>
+                <td>{key.empcity}</td>
+                <td>{key.empsubject}</td>
+            </tr>
+            </>
+        )
+    })
+
+
+
+    return(
+        <>
+        
+        
+        {ans}
+        </>
+    )
+}
+
+export default Display;
