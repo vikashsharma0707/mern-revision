@@ -19,7 +19,7 @@ const Display=()=>{
     })
 
 
-
+// this cide
     const ans = val.map((key)=>{
         return(
             <>
