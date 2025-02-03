@@ -12,7 +12,7 @@ const Edit=()=>{
     const [input,setinput]=useState({})
 
     const loaddata=()=>{
-        let api= "http://localhost:8005/employee/empEdit";
+        let api= "REACT_APP_API_URL/employee/empEdit";
         axios.post(api,{id:empid}).then((res)=>{
            setinput(res.data)
            console.log(res.data)

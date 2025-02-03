@@ -8,7 +8,7 @@ const Display=()=>{
     const [val,setval]=useState([])
 
     const loaddata=()=>{
-        let api="http://localhost:8005/employee/empDisplay"
+        let api="REACT_APP_API_URL/employee/empDisplay"
         axios.get(api).then((res)=>{
               setval(res.data)
         })

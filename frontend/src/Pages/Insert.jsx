@@ -12,7 +12,7 @@ const Insert = () => {
     };
 
     const handleSubmit = () => {
-        let api = "http://localhost:8005/employee/empSave";
+        let api = "REACT_APP_API_URL/employee/empSave";
         axios.post(api, input).then((res) => {
             alert("Data saved");
         });

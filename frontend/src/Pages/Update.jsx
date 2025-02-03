@@ -10,7 +10,7 @@ const Update=()=>{
     const navigate =useNavigate()
 
     const loaddata=()=>{
-        let api="http://localhost:8005/employee/empDisplay"
+        let api="REACT_APP_API_URL/employee/empDisplay"
         axios.get(api).then((res)=>{
            setval(res.data)
         })
@@ -21,7 +21,7 @@ const Update=()=>{
     })
 
     const mydel=(id)=>{
-      let api="http://localhost:8005/employee/empDelete"
+      let api="REACT_APP_API_URL/employee/empDelete"
       axios.post(api,{id:id}).then(()=>{
         alert("data deleted sucessfully")
         loaddata()

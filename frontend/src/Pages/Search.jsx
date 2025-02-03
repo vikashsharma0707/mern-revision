@@ -9,7 +9,7 @@ const Search=()=>{
     const [val,setdata] =useState([])
 
     const handleSearch=()=>{
-        let api="http://localhost:8005/employee/empSearch"
+        let api="REACT_APP_API_URL/employee/empSearch"
         axios.post(api,{empno:empno}).then((res)=>{
           setdata(res.data)
           console.log(res.data)
